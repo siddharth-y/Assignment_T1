@@ -1,0 +1,82 @@
+body{ margin: 0; background: linear-gradient( #41B3A3, white); }
+header{padding: 0%; background:black; width: 100%; align-items: center; }
+
+nav{ height: 67px; width: 100%; }
+.logo div img{  padding: 15px; margin: 0px; float: left; display: inline; }
+nav ul{ margin: 3px; padding: 0; display: inline;  }
+nav ul li{
+	float: right; margin: 1%; padding: 1%; background:black; ;
+}
+nav ul li a{ text-decoration: none; display: block-round; width: 100%; color: white; }
+nav ul li:hover{background: #e66a6a;}
+
+.flex-container{ display: flex; }
+.flex-child{ flex: 1; border: 2px; padding: 10px; padding-top: 23px; padding-right: 30px;}
+.flex-child:first-child{ margin-right: 20px; padding-top: 5px; }
+
+
+
+
+.Right{ 
+       width: 500px;
+        height: 500px;
+        float: right;
+        text-align: center;
+        padding: 65px;}
+h1{  font-family: cursive; }
+
+
+.left{ float: left;
+	width: 50px;
+	height: 500px;
+}
+.left img{ height: 250px;
+     background-image: "home.JPG"
+     padding: 0px;
+     padding-top: 57px;
+     
+      }
+.left img:hover{
+	transform: scale(1.5,1.5);
+}
+
+
+ 
+
+.cls{ clear: both;}
+footer{ background-color: silver; width: 100%;  vertical-align: center;list-style: none;}
+.CopyRight{ text-align: center; padding-bottom: 30px;}
+.social{ display: inline-flex; justify-content: center; padding-top: 20px;}
+.social nav ul{ margin: 3px; padding: 6px; display: inline;  }
+.social nav ul li:hover{background: #e66a6a;}
+.social nav ul li{   display: inline;}
+.social img{ height: 50px; display: inline;}
+
+
+
+/*---------- Potfolio.Css---------- */
+
+.potfolio{ background-color: ; padding: 1px; }
+.potfolio h1{ margin-left: 256px; }
+.potfolio h3{ text-align: center; }
+.potfolio h4{text-align: center;}
+.Images img{ margin: 40px;
+    height: 500px;
+    background: aliceblue;
+    border-radius: 52px;}
+   
+
+
+
+
+/*----------- Contact.CSS----------*/
+.Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50px; }
+.Form legend{ text-align: center; }
+.Form div{ padding-left: 120px; }
+
+
+@media screen and (max-width: 500px){
+	nav ul{ flex-direction: column; }
+	nav ul li{width: 96%; margin: 1%; padding: 1%;}
+
+}
