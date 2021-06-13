@@ -1,4 +1,4 @@
-body{ margin: 0; background: linear-gradient( #41B3A3, white); }
+body{ margin: 0; background: linear-gradient( #dfdfdf, white); }
 header{padding: 0%; background:black; width: 100%; align-items: center; }
 
 nav{ height: 67px; width: 100%; }
@@ -56,16 +56,29 @@ footer{ background-color: silver; width: 100%;  vertical-align: center;list-styl
 
 /*---------- Potfolio.Css---------- */
 
-.potfolio{ background-color: ; padding: 1px; }
-.potfolio h1{ margin-left: 256px; }
-.potfolio h3{ text-align: center; }
-.potfolio h4{text-align: center;}
+.portfolio{ background-color: ; padding: 1px; }
+.portfolio h1{ margin-left: 256px; }
+.portfolio h3{ text-align: center; }
+.portfolio h4{text-align: center;}
 .Images img{ margin: 40px;
     height: 500px;
+    width: 1040px;
     background: aliceblue;
     border-radius: 52px;}
-   
+.Images p{ text-align: center; margin-left: 80px;
+    margin-right: 80px; background-color: #b7d5de;
+    padding: 20px; }  
 
+
+
+
+
+
+
+
+/*---------- C V ---------*/
+.cv_left{ width: 50%;  height: 500px; float: left; background-color: #69C ;}
+.cv_right{ width: 50%; height: 500px; float: right; background-color: #99C; }
 
 
 
