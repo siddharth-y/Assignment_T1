@@ -79,6 +79,8 @@ footer{ background-color: silver; width: 100%;  vertical-align: center;list-styl
 /*---------- C V ---------*/
 .cv_left{ width: 50%;  height: 500px; float: left; background-color: #69C ;}
 .cv_right{ width: 50%; height: 500px; float: right; background-color: #99C; }
+.cv_main{ text-align: left;margin: 10px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
+
 
 
 
