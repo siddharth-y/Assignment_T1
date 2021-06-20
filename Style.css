@@ -1,25 +1,25 @@
 body{ margin: 0; background: linear-gradient( #dfdfdf, white); }
-header{padding: 0%; background:black; width: 100%; align-items: center; }
+.container{width: 100%; padding-left: 8%; padding-right: 8%; overflow: hidden; box-sizing: border-box;  }
+.navbar{ width: 100%; display: flex; align-items: center;}
+.logo{ width: 100px; cursor: pointer; margin: 30px 0;}
+.menu{ width: 25px; cursor: pointer; display: none; }
+nav{ flex: 1;text-align: right; }
 
-nav{ height: 67px; width: 100%; }
-.logo div img{  padding: 15px; margin: 0px; float: left; display: inline; }
-nav ul{ margin: 3px; padding: 0; display: inline;  }
 nav ul li{
-	float: right; margin: 1%; padding: 1%; background:black; ;
+	margin-right: 30px; display: inline-block; list-style: none;
 }
-nav ul li a{ text-decoration: none; display: block-round; width: 100%; color: white; }
+nav ul li a{ text-decoration: none;  color: white; font-size: 14; }
 nav ul li:hover{background: #e66a6a;}
 
-.flex-container{ display: flex; }
-.flex-child{ flex: 1; border: 2px; padding: 10px; padding-top: 23px; padding-right: 30px;}
-.flex-child:first-child{ margin-right: 20px; padding-top: 5px; }
+
+
 
 
 
 
 .Right{ 
-       width: 500px;
-        height: 500px;
+       width: 30%;
+        height: 200px;
         float: right;
         text-align: center;
         padding: 65px;}
@@ -27,14 +27,14 @@ h1{  font-family: cursive; }
 
 
 .left{ float: left;
-	width: 50px;
+	width: 50%;
 	height: 500px;
 }
 .left img{ height: 250px;
      background-image: "home.JPG"
      padding: 0px;
      padding-top: 57px;
-     
+         padding-left: 28%;
       }
 .left img:hover{
 	transform: scale(1.5,1.5);
@@ -44,13 +44,10 @@ h1{  font-family: cursive; }
  
 
 .cls{ clear: both;}
-footer{ background-color: silver; width: 100%;  vertical-align: center;list-style: none;}
+footer{ background-color: silver;   vertical-align: center;list-style: none;}
 .CopyRight{ text-align: center; padding-bottom: 30px;}
-.social{ display: inline-flex; justify-content: center; padding-top: 20px;}
-.social nav ul{ margin: 3px; padding: 6px; display: inline;  }
-.social nav ul li:hover{background: #e66a6a;}
-.social nav ul li{   display: inline;}
-.social img{ height: 50px; display: inline;}
+.social img{ height: 30px; margin: 20px; cursor: pointer;}
+.social{ text-align: center; }
 
 
 
@@ -85,13 +82,41 @@ footer{ background-color: silver; width: 100%;  vertical-align: center;list-styl
 
 
 /*----------- Contact.CSS----------*/
-.Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50px; }
+.Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50%; }
 .Form legend{ text-align: center; }
 .Form div{ padding-left: 120px; }
 
 
-@media screen and (max-width: 500px){
-	nav ul{ flex-direction: column; }
-	nav ul li{width: 96%; margin: 1%; padding: 1%;}
+@media only screen and (max-width: 700px){
+	nav ul{ width: 100px; 
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+    background: linear-gradient( #ff54a2, #ff575a);
+   }
+  nav ul li{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav ul li a {
+    color: #fff;
 
-}
+  } 
+  .Right{ 
+    flex-direction: column-reverse;
+    margin: 50px 0;
+   }
+   .left{
+    flex-basis: 100%;
+    margin-bottom: 50px;
+   }
+  .menu{
+    display: block;
+  }
+  #menulist{
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  }

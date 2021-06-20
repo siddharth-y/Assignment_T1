@@ -3,49 +3,64 @@
 <head>
 	<title>Home page</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="Style.css">
+
 </head>
 <body >
-	<header>
-		<div class="flex-container">
-		  <div class="flex-child">	
-		    <div class="logo"><img src="\Users\Dell\OneDrive\Desktop\Term1\logo.jpg"></div>
-	    </div>
-	      <div class="flex-child">
-		    <nav class="main_nav">
-		     <ul>
+	<div class="container">
+		<div class="navbar">
+		    <img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\logo.jpg" class="logo">
+		    <nav>
+		     <ul id="menulist">
 			    <li><a href="Contact.html">Contact</a></li>
 			    <li><a href="CV.html">Curriculum Vitae</a></li>
 			    <li><a href="portfolio.html">Portfolio</a></li>
 			    <li><a href="index.html">Home</a></li>
-		       </ul>
+			</ul>
 	       </nav>
-         </div>
-       </div>
+	       <img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\menu.png" class="menu" onclick="togglemenu()">
+	    </div>
+	     </div>
 	   <div class="clear"></div>
-</header>
+</div>
+<div class="container">
 	<div class="Right">
 					<h1>Hi!</h1>
 					<h2>I'm Siddhath Yonzone Tamang.</h2>
 					<h3>1st year BSc.Computing Student.</h3>
 				</div>
 	<div class="left">
-	     <img src="\Users\Dell\OneDrive\Desktop\home.JPG" alt="my profile picture">	
+	     <img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\Profile1.JPG" alt="my profile picture">	
 	</div>
+</div>
 </body >
 
  <!-- comment -->
 <div class="cls"></div>
 <footer> 
-    	<nav class="social">
-    		<li><a href="https://www.instagram.com/siddharth_yonzone_/"><img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\instagram.png" alt="Instagram"/></a></li>
-    		<li><a href="https://www.facebook.com/siddharth.yonzone"><img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\facebook.png" alt="facebook"></a></li>
-    		<li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\gmail.png" alt="G-mail"></a></li><br>
-    	</nav>
+    	<div class="social">
+    		<img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\instagram.png">
+    		<img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\facebook.png">
+    		<img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\gmail.png">
+
+
+    	</div>
     	<div class="CopyRight">
     		CopyRight Siddharth Yonzone 2021
     	</div>
 </footer>
-
+<script>
+	var menulist = document.getElementById('menulist');
+	menulist.style.maxHeight = "0px";
+	function togglemenu() {
+		if (menulist.style.maxHeight == "opx"){
+			      menulist.style.maxHeight ="130px"
+		} 
+		else{
+			  menulist.style.maxHeight = "0px";
+		}
+		// body...
+	}
+</script>
 </html>
