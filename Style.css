@@ -1,15 +1,15 @@
-body{ margin: 0; background: linear-gradient( #dfdfdf, white); }
+body{ margin: 0; background: white; }
 .container{width: 100%; padding-left: 8%; padding-right: 8%; overflow: hidden; box-sizing: border-box;  }
 .navbar{ width: 100%; display: flex; align-items: center;}
-.logo{ width: 100px; cursor: pointer; margin: 30px 0;}
+.logo{ width: 200px; cursor: pointer; margin: 30px 0;}
 .menu{ width: 25px; cursor: pointer; display: none; }
 nav{ flex: 1;text-align: right; }
 
 nav ul li{
-	margin-right: 30px; display: inline-block; list-style: none;
+	margin-right: 30px; display: inline-block; list-style: none; 
 }
-nav ul li a{ text-decoration: none;  color: white; font-size: 14; }
-nav ul li:hover{background: #e66a6a;}
+nav ul li a{ text-decoration: none;  color: white; font-size: 14; color: black; display: inline-block; padding: 10px;}
+nav ul li:hover{background: #e66a6a;  }
 
 
 
