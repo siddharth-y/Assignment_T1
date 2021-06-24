@@ -1,22 +1,99 @@
 body{ margin: 0; background: white; }
 .container{width: 100%; padding-left: 8%; padding-right: 8%; overflow: hidden; box-sizing: border-box;  }
-.navbar{ width: 100%; display: flex; align-items: center;}
-.logo{ width: 200px; cursor: pointer; margin: 30px 0;}
+.navbar{ width: 100%; display: flex; align-items: center; background-color: aquamarine;}
+.logo{ width: 200px; cursor: pointer; margin: 30 0;}
 .menu{ width: 25px; cursor: pointer; display: none; }
-nav{ flex: 1;text-align: right; }
-
-nav ul li{
-	margin-right: 30px; display: inline-block; list-style: none; 
+header {
+  background:black;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
 }
-nav ul li a{ text-decoration: none;  color: white; font-size: 14; color: black; display: inline-block; padding: 10px;}
-nav ul li:hover{background: #e66a6a;  }
+/* Navigatin Style*/
+nav {
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  right: 0;
+  background:gray;
+  width: 100%;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
 
 
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  
+}
+
+nav a:hover {
+ background-color: #e66a6a;
+} 
+
+.nav-toggle:checked ~ nav{
+ transform: scale(1,1) ;
+}
+.nav-toggle{
+  display: none;
+}
+
+.nav-toggle-label{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+.nav-toggle-label span::before{
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+} 
+
+.nav-toggle:checked ~ nav a{
+  opacity: 1;
+ transition: opacity 250ms ease-in-out 250ms;
+}
 
 
-
-
-
+/* Content */
 .Right{ 
        width: 30%;
         height: 200px;
@@ -87,36 +164,43 @@ footer{ background-color: silver;   vertical-align: center;list-style: none;}
 .Form div{ padding-left: 120px; }
 
 
-@media only screen and (max-width: 700px){
-	nav ul{ width: 100px; 
-    position: absolute;
-    top: 75px;
-    right: 0;
-    z-index: 2;
-    background: linear-gradient( #ff54a2, #ff575a);
-   }
-  nav ul li{
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+/* Media Quarry*/
+@media screen and (min-width: 800px){
+  .nav-toggle-label{
+    display: none;
   }
-  nav ul li a {
-    color: #fff;
-
+  header{
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr);
   } 
-  .Right{ 
-    flex-direction: column-reverse;
-    margin: 50px 0;
-   }
-   .left{
-    flex-basis: 100%;
-    margin-bottom: 50px;
-   }
-  .menu{
+  .logo{
+    grid-column: 1;
+  }
+
+  nav{
+    all: unset;
+    grid-column: 3 /4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav ul{
+    display: flex;
+  }
+  nav a{
+    opacity: 1;
+  }
+  nav a::before{
+    content: '';
     display: block;
+    background:#e66a6a ;
+    position: absolute;
   }
-  #menulist{
-    overflow: hidden;
-    transition: 0.5s;
+  nav li{
+    margin-right: 3em ;
+    margin-bottom: 0;
   }
+  nav li a{
+   text-decoration: none;  color: white; font-size: 12; color: white; display: inline-block; padding: 10px;}
   }
+  }   

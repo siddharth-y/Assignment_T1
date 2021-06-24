@@ -8,22 +8,26 @@
 	<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
-	<div class="container">
-		<div class="navbar">
-		    <img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\logo1.jpg" class="logo">
-		    <nav>
-		     <ul id="menulist">
-			    <li><a href="index.html">Home</a></li>
-			    <li><a href="portfolio.html">Potfolio</a></li>
-			    <li><a href="CV.html">Curriculum Vitae</a></li>
-			    <li><a href="Contact.html">Contact</a></li>
-			</ul>
-	       </nav>
-	       <img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\menu.png" class="menu" onclick="togglemenu()">
-	    </div>
-	     </div>
+	<header>
+   <img src="\Users\Dell\OneDrive\Desktop\Assignment_T1\logo.jpg" class="logo">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+    <ul>
+         <li><a href="index.html">Home</a></li>
+	     <li><a href="portfolio.html">Potfolio</a></li>
+	     <li><a href="CV.html">Curriculum Vitae</a></li>
+		 <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+</header>
 	   <div class="clear"></div>
-</div>
+</div><br><br>
+
+
+
 <main>
 	<div class="Form">
 		<form action="/action_page.php" method="get">
