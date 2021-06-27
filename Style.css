@@ -4,7 +4,7 @@ body{ margin: 0; background: white; }
 .logo{ width: 200px; cursor: pointer; margin: 30 0;}
 .menu{ width: 25px; cursor: pointer; display: none; }
 header {
-  background:black;
+  background: black;
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -16,7 +16,7 @@ nav {
   text-align: right;
   top: 100%;
   right: 0;
-  background:gray;
+  background:linear-gradient(black, #676565);
   width: 100%;
   transform: scale(1,0);
   transform-origin: top;
@@ -26,7 +26,7 @@ nav {
 
 nav ul {
   margin: 0;
-  padding: 0;
+  padding: 15px;
   list-style: none;
 }
 
@@ -120,7 +120,7 @@ h1{  font-family: cursive; }
 
  
 
-.cls{ clear: both;}
+
 footer{ background-color: silver;   vertical-align: center;list-style: none;}
 .CopyRight{ text-align: center; padding-bottom: 30px;}
 .social img{ height: 30px; margin: 20px; cursor: pointer;}
@@ -135,8 +135,8 @@ footer{ background-color: silver;   vertical-align: center;list-style: none;}
 .portfolio h3{ text-align: center; }
 .portfolio h4{text-align: center;}
 .Images img{ margin: 40px;
-    height: 500px;
-    width: 1040px;
+    max-height: 100px;
+    max-width: 100px;
     background: aliceblue;
     border-radius: 52px;}
 .Images p{ text-align: center; margin-left: 80px;
@@ -162,6 +162,20 @@ footer{ background-color: silver;   vertical-align: center;list-style: none;}
 .Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50%; }
 .Form legend{ text-align: center; }
 .Form div{ padding-left: 120px; }
+
+/*----------- Site Report.CSS----------*/
+.validation img{
+  width: 100%;
+  height: 200%;
+}
+.validation p{
+  padding: 10px;
+  background: aliceblue;
+}
+
+
+
+
 
 
 /* Media Quarry*/
@@ -203,4 +217,10 @@ footer{ background-color: silver;   vertical-align: center;list-style: none;}
   nav li a{
    text-decoration: none;  color: white; font-size: 12; color: white; display: inline-block; padding: 10px;}
   }
+
+  .Images img{ margin: 40px;
+    height: 500px;
+    width: 1040px;
+    background: aliceblue;
+    border-radius: 52px;}
   }   
