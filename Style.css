@@ -1,14 +1,15 @@
 body{ margin: 0; background: white; }
-.container{width: 100%; padding-left: 8%; padding-right: 8%; overflow: hidden; box-sizing: border-box;  }
-.navbar{ width: 100%; display: flex; align-items: center; background-color: aquamarine;}
+
 .logo{ width: 200px; cursor: pointer; margin: 30 0;}
-.menu{ width: 25px; cursor: pointer; display: none; }
+main{ padding-top: 8%;
+    padding-left: 3%; }
 header {
   background: black;
   text-align: center;
-  position: 0;
+  position: fixed;
   z-index: 999;
   width: 100%;
+  top: 0;
 }
 /* Navigatin Style*/
 nav {
@@ -50,15 +51,17 @@ nav a:hover {
  background-color: #e66a6a;
 } 
 
-.nav-toggle:checked ~ nav{
- transform: scale(1,1) ;
-}
 .nav-toggle{
-  
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
 }
+.nav-toggle:checked ~ nav{
+ transform: scale(1,1) ;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);}
 
 .nav-toggle-label{
   position: absolute;
@@ -92,14 +95,22 @@ nav a:hover {
 } 
 
 .nav-toggle:checked ~ nav a{
-  opacity: 1;
+ opacity: 1;
  transition: opacity 250ms ease-in-out 250ms;
 }
 
 
-/* Content */
+/* Index.html  */
+.container{width: 100%; 
+  padding-left: 8%;
+  padding-right: 8%;
+  overflow: hidden;
+  box-sizing: border-box; 
+  display: flex;
+  padding-top: 10%; }
+}
 .Right{ 
-       width: 30%;
+       width: 50%;
         height: 200px;
         float: right;
         text-align: center;
@@ -121,27 +132,32 @@ h1{  font-family: cursive; }
 	transform: scale(1.5,1.5);
 }
 
-
+img{
+  max-width: 100%;
+}
  
 
 
-footer{ background-color: silver;   vertical-align: center;list-style: none;}
-.CopyRight{ text-align: center; padding-bottom: 30px;}
+footer{ background-color: silver;
+   vertical-align: center;
+    
+   }
+.CopyRight { text-align: center; padding-bottom: 30px;}
 .social img{ height: 30px; margin: 20px; cursor: pointer;}
 .social{ text-align: center; }
 
 
 
 /*---------- Potfolio.Css---------- */
-
-.portfolio{ background-color: ; padding: 1px; }
+.portfolio main{ padding-top: 8%;
+    padding-left: 3%; }
+.portfolio{  padding: 10px;  }
 .portfolio h1{ margin-left: 256px; }
 .portfolio h3{ text-align: center; }
 .portfolio h4{text-align: center;}
 .Images img{ margin: 40px;
-    max-height: 100px;
-    max-width: 100px;
-    background: aliceblue;
+    max-width: 100%;
+    width: 90%;
     border-radius: 52px;}
 .Images p{ text-align: center; margin-left: 80px;
     margin-right: 80px; background-color: #b7d5de;
@@ -157,8 +173,9 @@ footer{ background-color: silver;   vertical-align: center;list-style: none;}
 /*---------- C V ---------*/
 .cv_left{ width: 50%;  height: 500px; float: left; background-color: #69C ;}
 .cv_right{ width: 50%; height: 500px; float: right; background-color: #99C; }
-.cv_main{ text-align: left;margin: 10px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
-
+.cv_main{ text-align: left;margin: 10px;
+margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
+.cv_main h1{ margin-top: -46px; }
 
 
 
@@ -183,13 +200,14 @@ footer{ background-color: silver;   vertical-align: center;list-style: none;}
 
 
 /* Media Quarry*/
-@media screen and (min-width: 800px){
+@media screen and (min-width: 999px){
   .nav-toggle-label{
     display: none;
   }
   header{
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr);
+    position: fixed;
   } 
   .logo{
     grid-column: 1;
@@ -207,18 +225,86 @@ footer{ background-color: silver;   vertical-align: center;list-style: none;}
   }
   nav a{
     opacity: 1;
+    position: relative;
   }
   nav a::before{
     content: '';
     display: block;
     background:#e66a6a ;
     position: absolute;
+     top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
   }
   nav li{
     margin-right: 3em ;
     margin-bottom: 0;
   }
   nav li a{
-   text-decoration: none;  color: white; font-size: 12; color: white; display: inline-block; padding: 10px;}
+   text-decoration: none; 
+    color: white; 
+    font-size: 12;
+    display: inline-block;
+   padding: 10px;}
   }
-  }   
+
+
+@media screen and ( max-width:600px){
+.container{
+  width: 100%; order: 2;
+  flex-direction: column;
+
+}
+.Right{ 
+       max-width: 100%;
+     }
+h1{  font-family: cursive; }
+
+
+.left{ float: left;
+  width: 50%;
+  height: 500px;
+}
+.left img{ max-width: 100%;
+}
+.left img:hover{
+  transform: scale(1.5,1.5);
+}
+.Images img{ max-width: 100%; }
+.Images p{ text-align: center; margin-left: 80px;
+    margin-right: 80px; background-color: #b7d5de;
+    padding: 20px; max-width: 100%; }  
+
+
+
+}
+@media screen and ( max-width:500px){
+.container{
+  width: 100%; order: 2;
+  flex-direction: column;
+
+}
+.Right{ 
+       max-width: 100%;
+     }
+h1{  font-family: cursive; }
+
+
+.left{ float: left;
+  width: 50%;
+  height: 500px;
+}
+.left img{ width: 100%;
+}
+.left img:hover{
+  transform: scale(1.5,1.5);
+}
+.Images img{ max-width: 100%; }
+.Images p{ text-align: center; margin-left: 80px;
+    margin-right: 80px; background-color: #b7d5de;
+    padding: 20px; max-width: 100%; } 
+
+
+}
