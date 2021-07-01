@@ -1,8 +1,9 @@
 body{ margin: 0; background: white; }
 
 .logo{ width: 200px; cursor: pointer; margin: 30 0;}
-main{ padding-top: 8%;
-    padding-left: 3%; }
+main{ padding-top: 7%;
+    padding-left: 3%;
+    max-width: 100%; }
 header {
   background: black;
   text-align: center;
@@ -116,17 +117,52 @@ nav a:hover {
         text-align: center;
         padding: 65px;}
 h1{  font-family: cursive; }
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ .button1 {
+  background-color: #e66a6a; 
+  color: black; 
+  border: 14px solid #e66a6a;
+  border-radius: 15px;
+}
 
+.button1:hover {
+  background-color: #e66a6a;
+  color: white;
+  
+}
+
+.button2 {
+  background-color: #008CBA; 
+  color: black; 
+  border: 14px solid #008CBA;
+  border-radius: 15px;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
 
 .left{ float: left;
-	width: 50%;
-	height: 500px;
+	max-width: 100%;
+
 }
 .left img{ height: 250px;
      background-image: "home.JPG"
      padding: 0px;
-     padding-top: 57px;
-         padding-left: 28%;
+     padding-top: 1%;
+     padding-left: 50%;
+     padding-bottom: 30%;
       }
 .left img:hover{
 	transform: scale(1.5,1.5);
@@ -146,11 +182,14 @@ footer{ background-color: silver;
 
 
 
-/*---------- Potfolio.Css---------- */
-.portfolio main{ padding-top: 5%;
-    padding-left: 14%; }
-.portfolio{  padding: 10px;  padding-left: 14%;}
+/*---------- Portfolio.CSS---------- */
+.portfolio main{ padding-top: 7%; padding: 45px;
+    margin-bottom: auto;
+    margin-top: 3%;
+    max-width: 100%; }
+
 .row {
+  max-width: 100%;
   margin: 8px -16px;
   padding-left: 10%;
 }
@@ -164,9 +203,11 @@ footer{ background-color: silver;
 
 .column {
   float: left;
-  width: 25%;
+  max-width: 100%;
   background-color: #9acaf4;
-
+  text-align: center;
+  font-size: 21px;
+  font-family: cursive;
 }
 
 .row:after {
@@ -181,36 +222,52 @@ footer{ background-color: silver;
   text-align: center;
   font-family: Arial, sans-serif;
 }
-
+.content img{
+  max-height: 100px;
+}
 
 
 
 /*---------- C V ---------*/
-.cv_left{ width: 50%;  height: 500px; float: left; background-color: #69C ;}
-.cv_right{ width: 50%; height: 500px; float: right; background-color: #99C; }
-.cv_main{ text-align: left;margin: 10px;
+.cv_main{ text-align: left;margin: 10px; max-width: 100%;
 margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
-.cv_main h1{ margin-top: -46px; }
+.cv_main h1{    margin-top: 16px;
+    margin-bottom: -12px; max-width: 100%;}
 
 
 
 /*----------- Contact.CSS----------*/
-.Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50%; }
+.Form{ margin: 6%;
+    padding-top: 4%; max-width: 100%; padding-bottom: 1%; box-sizing: border-box; }
+.Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50%; margin-left: 2px; }
 .Form legend{ text-align: center; }
 .Form div{ padding-left: 120px; }
+.Form a {background-color: #e66a6a; 
+  color: black; 
+  border: 14px solid #e66a6a;
+  border-radius: 15px;
+}
+  input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+}
 
 /*----------- Site Report.CSS----------*/
-.validation img{
-  width: 100%;
-  height: 200%;
-}
-.validation p{
-  padding: 10px;
-  background: aliceblue;
-}
+.report{ padding-top: 10%; }
+.report h2{ padding-top: 7%; }
+
 .report p{
   font-size: 18px;
   font-family: Verdana, sans-serif;
+  
 }
 .report h4{
   text-align: center;
@@ -220,14 +277,59 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
   text-align: center;
   font-family: cursive;
 }
-.validation h3{
-  text-align: center;
-}
-.validation h4{
-  text-align: center;
-  font-size: 18px;
+.validation img{
+  width: 100%;
+  height: 200%;
 }
 
+.validation h2{
+  padding-left: 5%;}
+.validation h3{
+  text-align: center;}
+
+.validation p{
+  text-align: center;
+  font-size: 18px;
+  padding-left: 5%; padding: 10px;
+  background: aliceblue;
+}
+.Degin h3{
+  text-align: center;
+}
+.Degin img{ max-width: 100%; }
+.Degin p{ padding-left: 5%; padding: 10px;
+  background: aliceblue;
+  text-align: center;
+  font-size: 18px; }
+.Degin h2{
+  padding-left: 5%;}
+
+.ups_and_downs h3{
+  background: #b6c8e7;
+    padding-left: 5%;
+    padding: 3%;
+    margin: 0px;}
+.ups_and_downs h4{
+  padding-left: 7%;
+  background-color:#ffcccc; 
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0;
+}
+.ups_and_downs li{
+  padding-left: 7%;
+  background-color:#ffcccc; 
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0;
+}
+.ups_and_downs p{
+  padding-left: 7%;
+  background-color:#ffcccc; 
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0;
+}
 
 
 
@@ -244,6 +346,7 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
   } 
   .logo{
     grid-column: 1;
+    max-width: 100%;
   }
 
   nav{
@@ -282,13 +385,16 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
     display: inline-block;
    padding: 10px;}
   }
+
    .column {
         width: 37%;
         margin: 1%;
   }
+}
 
 
 @media screen and ( max-width:600px){
+main{ max-width: 100%; }
 .container{
   width: 100%; order: 2;
   flex-direction: column;
@@ -313,25 +419,34 @@ h1{  font-family: cursive; }
 .Images p{ text-align: center; margin-left: 80px;
     margin-right: 80px; background-color: #b7d5de;
     padding: 20px; max-width: 100%; }  
-.Form{ max-width: 100%;
-  }
-.column {
-    width: 50%;
-    padding-left: 10%;
 
+.column {
+    max-width: 50%;
+    padding-left: 10%;
   }
 .row{ padding-left: 20%; }
 }
+footer{
+  max-width: 100%;
+}
+.report{ max-height: 100%; padding-top: 7%;}
+}
+.cv_main{ text-align: left;margin: 10px; max-width: 100%;
+  font-size: 18px;
+margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
+.cv_main h1{    margin-top: 16px;
+    margin-bottom: -12px; max-width: 100%;}
+
 @media screen and ( max-width:500px){
 .container{
   width: 100%; order: 2;
-  flex-direction: column;
+  flex-direction: column;}
+.logo{ max-width: 50%;  }
 
-}
 .Right{ 
        max-width: 100%;
      }
-h1{  font-family: cursive; }
+h1{  font-family: cursive; padding-top: 7%; }
 
 
 .left{ float: left;
@@ -347,9 +462,21 @@ h1{  font-family: cursive; }
 .Images p{ text-align: center; margin-left: 80px;
     margin-right: 80px; background-color: #b7d5de;
     padding: 20px; max-width: 100%; } 
-.Form{ max-width: 100%;
-  }
-.Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50%; }
-.Form legend{ text-align: center; }
-.Form div{ padding-left: 120px; }
+
+.report{ max-height: 100%; padding-top: 7%;}
+.column {
+  float: left;
+  max-width: 100%;
+  background-color: #9acaf4;
+  text-align: center;
+  max-font-size: 18px;
+  font-family: cursive;
+}
+.portfolio main{ padding-top: 9%;  }
+.content img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+}
 }
