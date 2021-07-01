@@ -132,15 +132,13 @@ h1{  font-family: cursive; }
 	transform: scale(1.5,1.5);
 }
 
-img{
-  max-width: 100%;
-}
- 
+img{ max-width: 100%; }
 
 
 footer{ background-color: silver;
    vertical-align: center;
-    
+   width: 100%;
+   
    }
 .CopyRight { text-align: center; padding-bottom: 30px;}
 .social img{ height: 30px; margin: 20px; cursor: pointer;}
@@ -149,23 +147,40 @@ footer{ background-color: silver;
 
 
 /*---------- Potfolio.Css---------- */
-.portfolio main{ padding-top: 8%;
-    padding-left: 3%; }
-.portfolio{  padding: 10px;  }
-.portfolio h1{ margin-left: 256px; }
-.portfolio h3{ text-align: center; }
-.portfolio h4{text-align: center;}
-.Images img{ margin: 40px;
-    max-width: 100%;
-    width: 90%;
-    border-radius: 52px;}
-.Images p{ text-align: center; margin-left: 80px;
-    margin-right: 80px; background-color: #b7d5de;
-    padding: 20px; }  
+.portfolio main{ padding-top: 5%;
+    padding-left: 14%; }
+.portfolio{  padding: 10px;  padding-left: 14%;}
+.row {
+  margin: 8px -16px;
+  padding-left: 10%;
+}
+.row,
+.row > .column {
+ padding-top:7px ;
+ padding-left: 7px;
+ padding-right: 7px;
+ padding-bottom: 7%;
+}
 
+.column {
+  float: left;
+  width: 25%;
+  background-color: #9acaf4;
 
+}
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+.content {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
 
 
 
@@ -193,7 +208,25 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
   padding: 10px;
   background: aliceblue;
 }
-
+.report p{
+  font-size: 18px;
+  font-family: Verdana, sans-serif;
+}
+.report h4{
+  text-align: center;
+  font-family: cursive;
+}
+.report h5{
+  text-align: center;
+  font-family: cursive;
+}
+.validation h3{
+  text-align: center;
+}
+.validation h4{
+  text-align: center;
+  font-size: 18px;
+}
 
 
 
@@ -249,6 +282,10 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
     display: inline-block;
    padding: 10px;}
   }
+   .column {
+        width: 37%;
+        margin: 1%;
+  }
 
 
 @media screen and ( max-width:600px){
@@ -276,9 +313,14 @@ h1{  font-family: cursive; }
 .Images p{ text-align: center; margin-left: 80px;
     margin-right: 80px; background-color: #b7d5de;
     padding: 20px; max-width: 100%; }  
+.Form{ max-width: 100%;
+  }
+.column {
+    width: 50%;
+    padding-left: 10%;
 
-
-
+  }
+.row{ padding-left: 20%; }
 }
 @media screen and ( max-width:500px){
 .container{
@@ -299,12 +341,15 @@ h1{  font-family: cursive; }
 .left img{ width: 100%;
 }
 .left img:hover{
-  transform: scale(1.5,1.5);
+  transform: scale(1.2,1.2);
 }
 .Images img{ max-width: 100%; }
 .Images p{ text-align: center; margin-left: 80px;
     margin-right: 80px; background-color: #b7d5de;
     padding: 20px; max-width: 100%; } 
-
-
+.Form{ max-width: 100%;
+  }
+.Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50%; }
+.Form legend{ text-align: center; }
+.Form div{ padding-left: 120px; }
 }
