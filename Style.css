@@ -1,82 +1,540 @@
-body{ margin: 0; background: linear-gradient( #41B3A3, white); }
-header{padding: 0%; background:black; width: 100%; align-items: center; }
+/* ----------------CSS of Body for all webpage ------------------ */
 
-nav{ height: 67px; width: 100%; }
-.logo div img{  padding: 15px; margin: 0px; float: left; display: inline; }
-nav ul{ margin: 3px; padding: 0; display: inline;  }
-nav ul li{
-	float: right; margin: 1%; padding: 1%; background:black; ;
+body{ margin: 0; background: white; }
+
+/* ------------------------CSS of main for all webpage------------------------ */
+
+main{ padding-top: 7%;
+    padding-left: 3%;
+    max-width: 100%; }
+
+/* --------------------CSS of Body for all header--------------------------- */
+
+header {
+  background: black;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
 }
-nav ul li a{ text-decoration: none; display: block-round; width: 100%; color: white; }
-nav ul li:hover{background: #e66a6a;}
+.logo{ width: 200px; cursor: pointer; margin: 15px;
+margin-left: 0px;}
 
-.flex-container{ display: flex; }
-.flex-child{ flex: 1; border: 2px; padding: 10px; padding-top: 23px; padding-right: 30px;}
-.flex-child:first-child{ margin-right: 20px; padding-top: 5px; }
+/* ------------------------------------------------------------------ */
 
+/* Navigation Style*/
+nav {
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  right: 0;
+  background:linear-gradient(black, #676565);
+  width: 100%;
+  justify-content: space-between;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
 
+nav ul {
+  margin: 0;
+  padding: 15px;
+  list-style: none;
+}
 
+/* Navigation links*/
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  
+}
+
+/* Navigation links hover*/
+nav a:hover {
+ background-color: #e66a6a;
+} 
+
+/* ------------------------------------------------------------------ */
+
+/* Hamburger icon.*/
+/*Powell, K., 2018.
+ Create a responsive navigation nav with no JS!.
+  [video] Available at: <https://www.youtube.com/watch?v=8QKOaTYvYUA> [Accessed 28 June 2021].*/
+/*----------- Toggles Hamburger icon ----------*/
+.nav-toggle{
+  position: absolute ;
+  top: -9999px ;
+  left: -9999px ;
+}
+.nav-toggle:checked ~ nav{
+ transform: scale(1,1) ;
+}
+
+.nav-toggle-label{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+.nav-toggle-label span::before{
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+} 
+
+.nav-toggle:checked ~ nav a{
+ opacity: 1;
+ transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Index.HTML CSS */
+.container{width: 100%; 
+  padding-left: 8%;
+  padding-right: 8%;
+  overflow: hidden;
+  box-sizing: border-box; 
+  display: flex;
+  padding-top: 10%; }
 
 .Right{ 
-       width: 500px;
-        height: 500px;
+       width: 50%;
+        height: 200px;
         float: right;
         text-align: center;
         padding: 65px;}
 h1{  font-family: cursive; }
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ .button1 {
+  background-color: #e66a6a; 
+  color: black; 
+  border: 14px solid #e66a6a;
+  border-radius: 15px;
+}
 
+.button1:hover {
+  background-color: #e66a6a;
+  color: white;
+  
+}
+
+.button2 {
+  background-color: #008CBA; 
+  color: black; 
+  border: 14px solid #008CBA;
+  border-radius: 15px;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
 
 .left{ float: left;
-	width: 50px;
-	height: 500px;
+	max-width: 100%;
+
 }
-.left img{ height: 250px;
-     background-image: "home.JPG"
+.left img{ max-height: 250px;
      padding: 0px;
-     padding-top: 57px;
-     
+     padding-top: 1%;
+     padding-left: 50%;
+     padding-bottom: 30%;
       }
 .left img:hover{
 	transform: scale(1.5,1.5);
 }
+/* ------------------------------------------------------------------ */
 
+/* Max size for images*/
+img{ max-width: 100%; }
 
- 
+/* ------------------------------------------------------------------ */
 
-.cls{ clear: both;}
-footer{ background-color: silver; width: 100%;  vertical-align: center;list-style: none;}
-.CopyRight{ text-align: center; padding-bottom: 30px;}
-.social{ display: inline-flex; justify-content: center; padding-top: 20px;}
-.social nav ul{ margin: 3px; padding: 6px; display: inline;  }
-.social nav ul li:hover{background: #e66a6a;}
-.social nav ul li{   display: inline;}
-.social img{ height: 50px; display: inline;}
-
-
-
-/*---------- Potfolio.Css---------- */
-
-.potfolio{ background-color: ; padding: 1px; }
-.potfolio h1{ margin-left: 256px; }
-.potfolio h3{ text-align: center; }
-.potfolio h4{text-align: center;}
-.Images img{ margin: 40px;
-    height: 500px;
-    background: aliceblue;
-    border-radius: 52px;}
+/* Style for footer */
+footer{ background-color: silver;
+   vertical-align: center;
+   width: 100%;
    
+   }
+.CopyRight { text-align: center; padding-bottom: 30px;}
+.social img{ height: 30px; margin: 20px; cursor: pointer;}
+.social{ text-align: center; }
 
+/* ------------------------------------------------------------------ */
+
+/*---------- Portfolio.CSS---------- */
+.portfolio main{  padding: 45px;
+    margin-bottom: auto;
+    margin-top: 3%;
+    max-width: 100%; }
+
+.row {
+  max-width: 100%;
+  margin: 8px -16px;
+  padding-left: 10%;
+}
+.row,
+.row > .column {
+ padding-top:7px ;
+ padding-left: 7px;
+ padding-right: 7px;
+ padding-bottom: 7%;
+}
+
+.column {
+  float: left;
+  max-width: 100%;
+  background-color: #9acaf4;
+  text-align: center;
+  font-size: 21px;
+  font-family: cursive;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.content img{
+  max-height: 100px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/*---------- C V ---------*/
+.cv_main{ text-align: left;margin: 10px; max-width: 100%;
+margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
+.cv_main h1{    margin-top: -21px;
+    margin-bottom: -12px; max-width: 100%;}
 
 
 
 /*----------- Contact.CSS----------*/
-.Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50px; }
+.Form{ margin: 6%;
+    padding-top: 4%; max-width: 100%; padding-bottom: 1%; box-sizing: border-box; }
+.Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50%; margin-left: 2px; }
 .Form legend{ text-align: center; }
 .Form div{ padding-left: 120px; }
+.Form a {background-color: #e66a6a; 
+  color: black; 
+  border: 14px solid #e66a6a;
+  border-radius: 15px;
+}
+/* CSS for form text-box */
+  input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 
 
-@media screen and (max-width: 500px){
-	nav ul{ flex-direction: column; }
-	nav ul li{width: 96%; margin: 1%; padding: 1%;}
+
+/*----------- Site Report.CSS----------*/
+
+.report h2{ padding-top: 7%; }
+
+.report p{
+  font-size: 18px;
+  font-family: Verdana, sans-serif;
+}
+
+.report h4{
+  text-align: center;
+  font-family: cursive;
+}
+.report h5{
+  text-align: center;
+  font-family: cursive;
+}
+/* CSS for validation  images, heading and paragraph*/
+.validation img{
+  width: 94%;
+  height: 200%;
+  padding-left: 23px;
+  
+}
+
+.validation h2{
+  padding-left: 5%;}
+.validation h3{
+  text-align: center;}
+
+.validation p{
+  text-align: center;
+  font-size: 18px;
+  padding-left: 5%; padding: 10px;
+  background: aliceblue;
+}
+/* CSS for validation  Class Deign*/
+.Deign h3{
+  text-align: center;
+}
+.Deign img{
+  width: 94%;
+  height: 200%;
+  padding-left: 23px; }
+
+.Deign p{ padding-left: 5%; padding: 10px;
+  background: aliceblue;
+  text-align: center;
+  font-size: 18px; }
+.Deign h2{
+  padding-left: 5%;}
+
+/* CSS for validation  Class ups_and_downs*/
+.ups_and_downs{ padding-right: 7%; }
+.ups_and_downs h3{
+  background: #b6c8e7;
+    padding-left: 5%;
+    padding: 3%;
+    margin: 0px;}
+.ups_and_downs h4{
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color:#ffcccc; 
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0;
+}
+.ups_and_downs ul{ margin: 0; padding: 0; list-style: inside; }
+.ups_and_downs li{
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color:#ffcccc; 
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0;
+}
+.ups_and_downs p{
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color:#ffcccc; 
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0;
+}
+
+
+
+
+/* Media Quarry for Screen Size 999*/
+@media screen and (min-width: 999px){
+  main{ max-width: 100%;
+      padding-top: 9%;}
+/* Responsive hamburger menu */
+/*-- Powell, K., 2018.
+ Create a responsive navigation nav with no JS!.
+  [video] Available at: <https://www.youtube.com/watch?v=8QKOaTYvYUA> [Accessed 28 June 2021]. ---*/
+/*----------- Hides Hamburger icon ----------*/
+  .nav-toggle-label{
+    display: none;
+  }
+  header{
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr);
+    position: fixed;
+  } 
+  .logo{
+    grid-column: 1;
+    max-width: 100%;
+  }
+
+  nav{
+    all: unset;
+    grid-column: 3 /4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav ul{
+    display: flex;
+  }
+  nav a{
+    opacity: 1;
+    position: relative;
+  }
+  nav a::before{
+    content: '';
+    display: block;
+    background:#e66a6a ;
+    position: absolute;
+     top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  nav li{
+    margin-right: 18px ;
+    margin-bottom: 0;
+  }
+  nav li a{
+   text-decoration: none; 
+    color: white; 
+    font-size: 12px;
+    display: inline-block;
+   padding: 10px;}
+  }
+/*----------- Responsive Portfolio.CSS----------*/
+.column {
+   width: 37%;
+   margin: 1%;
+}
+/*----------- Responsive CV.CSS----------*/
+.cv_main h1{    margin-top: -30px;
+    margin-bottom: -12px; max-width: 100%;}
+
+
+/* Media Quarry for Screen 600 PX*/
+@media screen and ( max-width:600px){
+
+  /* Responsive main */
+main{ max-width: 100%;
+      padding-top: 9%;}
+
+/* Responsive index.HTML */
+.container{
+  width: 100%; order: 2;
+  flex-direction: column;
 
 }
+.Right{ 
+       max-width: 100%;
+     }
+h1{  font-family: cursive; }
+
+
+.left{ float: left;
+  width: 50%;
+  height: 500px;
+}
+.left img{ max-width: 100%;
+}
+.left img:hover{
+  transform: scale(1.5,1.5);
+}
+.Images img{ max-width: 100%; }
+.Images p{ text-align: center; margin-left: 80px;
+    margin-right: 80px; background-color: #b7d5de;
+    padding: 20px; max-width: 100%; }  
+
+/*----------- Responsive Portfolio.CSS----------*/
+.column {
+    max-width: 50%;
+    padding-left: 10%;
+  }
+.row{ padding-left: 20%; }
+}
+/* Responsive footer */
+footer{
+  max-width: 100%;
+}
+/* Responsive Site Report */
+.report{ max-height: 100%; padding-top: 7%;}
+
+/* Responsive CV */
+.cv_main{ text-align: left;margin: 10px; max-width: 100%;
+  font-size: 18px;
+margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
+.cv_main h1{    margin-top: -21px;
+    margin-bottom: -12px; max-width: 100%;}
+
+
+/* Media Quarry for Screen Size 500 PX*/
+@media screen and ( max-width:500px){
+  /* Responsive index.HTML */
+.container{
+  width: 100%; order: 2;
+  flex-direction: column;}
+.logo{ max-width: 50%;  }
+
+.Right{ 
+       max-width: 100%;
+     }
+h1{  font-family: cursive; padding-top: 7%; }
+
+
+.left{ float: left;
+  width: 50%;
+  height: 500px;
+}
+.left img{ width: 100%; max-height: 100%;
+}
+.left img:hover{
+  transform: scale(1.2,1.2);
+}
+
+/*----------- Responsive SiteReport.CSS----------*/ 
+
+.report{ max-height: 100%; padding-top: 7%;}
+
+/*----------- Responsive Portfolio.CSS----------*/
+.column {
+  float: left;
+  max-width: 100%;
+  background-color: #9acaf4;
+  text-align: center;
+  font-size: 18px;
+  font-family: cursive;
+}
+.portfolio main{ padding-top: 9%;  }
+.content img{
+  max-height: 100%;
+  max-width: 100%;
+}
+}
+
+
+/*----------- END----Of----CSS ----------*/

@@ -1,48 +1,79 @@
-<!DOCTYPEhtml>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Home page</title>
+	<title>Curriculum Vitae</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body >
 	<header>
-		<div class="flex-container">
-		  <div class="flex-child">	
-		    <div class="logo"><img src="\Users\Dell\OneDrive\Desktop\Term1\logo.jpg"></div>
-	    </div>
-	      <div class="flex-child">
-		    <nav class="main_nav">
-		     <ul>
-			    <li><a href="Contact.html">Contact</a></li>
-			    <li><a href="CV.html">Curriculum Vitae</a></li>
-			    <li><a href="potfolio.html">Potfolio</a></li>
-			    <li><a href="index.html">Home</a></li>
-		       </ul>
-	       </nav>
-         </div>
-       </div>
-	   <div class="clear"></div>
+   <img src="Images/logo.jpg" alt="mylogo" class="logo">
+<!--  Checkbox for Hamburger icon --> 
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+<!-- Navigation Menu --> 
+  <nav>
+    <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="portfolio.html">Potfolio</a></li>
+         <li><a href="CV.html">Curriculum Vitae</a></li>
+         <li><a href="Contact.html">Contact</a></li>
+         <li><a href="SiteReport.html">Site Report</a></li>
+    </ul>
+  </nav>
+<!-- toggle for Hamburger icon -->
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
 </header>
+<!-- Main Curriculum Vitae Starts here. -->
+<main class="cv_main">
+     <h1>Siddharth Yonzone Tamang.</h1><br>
+     <p>Boudha-6, Tinchuli<br>
+     Kathmandu, Nepal.<br></p>
+     Phone No: +977 9803552037<br><br>
+     <h2>About Me:</h2>
+     <p>Have a positive impact on my field of activity,<br>
+      grow through the creative application of my beliefs based on values and professional divinity,<br>
+      and put all efforts into the work assigned to me. In an organized way, I can grow with the organization.<br>
+      I showed a high level of motivation, work spirit, and teamwork to achieve the expected score.</p>
+     <h3>Education:</h3>
+     <p>Naaya Aayam Multi-Disciplinary Institute (NAMI) Collage.<br>
+     Gokarneshwar-7, Kathmandu <br>
+     Nepal.<br></p>
+     <ul>
+     	<li>BSc. Computer Science '1st Year'</li>
+     </ul> 
+     <p>RAI School<br>
+     Balmandir compound, Naxal <br>
+     Kathmandu, Nepal.</p>
+     <ul>
+     	<li>HSC -2020</li>
+     	<li>GPA -6.5</li>
+     	<li>SSC -2018</li>
+     </ul>
+     <h3>Skills:</h3>
+     <ul>
+     	<li>Fluent in 3 languages.(Nepali, English and Hindi)</li>
+     	<li>Team work oriented.</li>
+      <li>Reasonably Experienced in problem solving</li>
+      <li>Listening and Communication</li>
 
-
-
-
-
-
-
-
-<div class="cls"></div>
+     </ul>
+     <h3>Hobbies:</h3>
+      Photography, Travel, Swimming.	
+    </main>
+<!--  Footer Starts here -->
 <footer> 
-    	<nav class="social">
-    		<li><a href="https://www.instagram.com/siddharth_yonzone_/"><img src="\Users\Dell\OneDrive\Desktop\Term1\instagram.png" alt="Instagram"/></a></li>
-    		<li><a href="https://www.facebook.com/siddharth.yonzone"><img src="\Users\Dell\OneDrive\Desktop\Term1\facebook.png" alt="facebook"></a></li>
-    		<li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><img src="\Users\Dell\OneDrive\Desktop\Term1\gmail.png" alt="G-mail"></a></li><br>
-    	</nav>
+    	<div class="social">
+<!--  Social images and links. -->
+            <img src="Images/instagram.png" alt="Instagram"/>
+            <img src="Images/facebook.png" alt="facebook"/>
+            <img src="Images/twitter.png" alt="twitter"/>
+        </div>
     	<div class="CopyRight">
-    		CopyRight Siddharth Yonzone 2021
+    		<p>&copy; CopyRight Siddharth Yonzone 2021</p>
     	</div>
 </footer>
-
+</body>
 </html>
