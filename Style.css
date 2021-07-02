@@ -1,9 +1,15 @@
+/* ----------------CSS of Body for all webpage ------------------ */
+
 body{ margin: 0; background: white; }
 
-.logo{ width: 200px; cursor: pointer; margin: 30 0;}
+/* ------------------------CSS of main for all webpage------------------------ */
+
 main{ padding-top: 7%;
     padding-left: 3%;
     max-width: 100%; }
+
+/* --------------------CSS of Body for all header--------------------------- */
+
 header {
   background: black;
   text-align: center;
@@ -12,7 +18,12 @@ header {
   width: 100%;
   top: 0;
 }
-/* Navigatin Style*/
+.logo{ width: 200px; cursor: pointer; margin: 15px;
+margin-left: 0px;}
+
+/* ------------------------------------------------------------------ */
+
+/* Navigation Style*/
 nav {
   position: absolute;
   text-align: right;
@@ -26,13 +37,13 @@ nav {
   transition: transform 400ms ease-in-out;
 }
 
-
 nav ul {
   margin: 0;
   padding: 15px;
   list-style: none;
 }
 
+/* Navigation links*/
 nav li {
   margin-bottom: 1em;
   margin-left: 1em;
@@ -48,21 +59,26 @@ nav a {
   
 }
 
+/* Navigation links hover*/
 nav a:hover {
  background-color: #e66a6a;
 } 
 
+/* ------------------------------------------------------------------ */
+
+/* Hamburger icon.*/
+/*Powell, K., 2018.
+ Create a responsive navigation nav with no JS!.
+  [video] Available at: <https://www.youtube.com/watch?v=8QKOaTYvYUA> [Accessed 28 June 2021].*/
+/*----------- Toggles Hamburger icon ----------*/
 .nav-toggle{
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
+  position: absolute ;
+  top: -9999px ;
+  left: -9999px ;
 }
 .nav-toggle:checked ~ nav{
  transform: scale(1,1) ;
 }
-
-.nav-toggle:focus ~ .nav-toggle-label {
-  outline: 3px solid rgba(lightblue, .75);}
 
 .nav-toggle-label{
   position: absolute;
@@ -100,8 +116,9 @@ nav a:hover {
  transition: opacity 250ms ease-in-out 250ms;
 }
 
+/* ------------------------------------------------------------------ */
 
-/* Index.html  */
+/* Index.HTML CSS */
 .container{width: 100%; 
   padding-left: 8%;
   padding-right: 8%;
@@ -109,7 +126,7 @@ nav a:hover {
   box-sizing: border-box; 
   display: flex;
   padding-top: 10%; }
-}
+
 .Right{ 
        width: 50%;
         height: 200px;
@@ -157,8 +174,7 @@ h1{  font-family: cursive; }
 	max-width: 100%;
 
 }
-.left img{ height: 250px;
-     background-image: "home.JPG"
+.left img{ max-height: 250px;
      padding: 0px;
      padding-top: 1%;
      padding-left: 50%;
@@ -167,10 +183,14 @@ h1{  font-family: cursive; }
 .left img:hover{
 	transform: scale(1.5,1.5);
 }
+/* ------------------------------------------------------------------ */
 
+/* Max size for images*/
 img{ max-width: 100%; }
 
+/* ------------------------------------------------------------------ */
 
+/* Style for footer */
 footer{ background-color: silver;
    vertical-align: center;
    width: 100%;
@@ -180,10 +200,10 @@ footer{ background-color: silver;
 .social img{ height: 30px; margin: 20px; cursor: pointer;}
 .social{ text-align: center; }
 
-
+/* ------------------------------------------------------------------ */
 
 /*---------- Portfolio.CSS---------- */
-.portfolio main{ padding-top: 7%; padding: 45px;
+.portfolio main{  padding: 45px;
     margin-bottom: auto;
     margin-top: 3%;
     max-width: 100%; }
@@ -226,12 +246,12 @@ footer{ background-color: silver;
   max-height: 100px;
 }
 
-
+/* ------------------------------------------------------------------ */
 
 /*---------- C V ---------*/
 .cv_main{ text-align: left;margin: 10px; max-width: 100%;
 margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
-.cv_main h1{    margin-top: 16px;
+.cv_main h1{    margin-top: -21px;
     margin-bottom: -12px; max-width: 100%;}
 
 
@@ -247,6 +267,7 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
   border: 14px solid #e66a6a;
   border-radius: 15px;
 }
+/* CSS for form text-box */
   input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -258,17 +279,17 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
   resize: vertical;
 }
 
-}
+
 
 /*----------- Site Report.CSS----------*/
-.report{ padding-top: 10%; }
+
 .report h2{ padding-top: 7%; }
 
 .report p{
   font-size: 18px;
   font-family: Verdana, sans-serif;
-  
 }
+
 .report h4{
   text-align: center;
   font-family: cursive;
@@ -277,9 +298,12 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
   text-align: center;
   font-family: cursive;
 }
+/* CSS for validation  images, heading and paragraph*/
 .validation img{
-  width: 100%;
+  width: 94%;
   height: 200%;
+  padding-left: 23px;
+  
 }
 
 .validation h2{
@@ -293,17 +317,24 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
   padding-left: 5%; padding: 10px;
   background: aliceblue;
 }
-.Degin h3{
+/* CSS for validation  Class Deign*/
+.Deign h3{
   text-align: center;
 }
-.Degin img{ max-width: 100%; }
-.Degin p{ padding-left: 5%; padding: 10px;
+.Deign img{
+  width: 94%;
+  height: 200%;
+  padding-left: 23px; }
+
+.Deign p{ padding-left: 5%; padding: 10px;
   background: aliceblue;
   text-align: center;
   font-size: 18px; }
-.Degin h2{
+.Deign h2{
   padding-left: 5%;}
 
+/* CSS for validation  Class ups_and_downs*/
+.ups_and_downs{ padding-right: 7%; }
 .ups_and_downs h3{
   background: #b6c8e7;
     padding-left: 5%;
@@ -311,13 +342,16 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
     margin: 0px;}
 .ups_and_downs h4{
   padding-left: 7%;
+  padding-right: 7%;
   background-color:#ffcccc; 
   padding-bottom: 10px;
   padding-top: 10px;
   margin: 0;
 }
+.ups_and_downs ul{ margin: 0; padding: 0; list-style: inside; }
 .ups_and_downs li{
   padding-left: 7%;
+  padding-right: 7%;
   background-color:#ffcccc; 
   padding-bottom: 10px;
   padding-top: 10px;
@@ -325,6 +359,7 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
 }
 .ups_and_downs p{
   padding-left: 7%;
+  padding-right: 7%;
   background-color:#ffcccc; 
   padding-bottom: 10px;
   padding-top: 10px;
@@ -334,8 +369,15 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
 
 
 
-/* Media Quarry*/
+/* Media Quarry for Screen Size 999*/
 @media screen and (min-width: 999px){
+  main{ max-width: 100%;
+      padding-top: 9%;}
+/* Responsive hamburger menu */
+/*-- Powell, K., 2018.
+ Create a responsive navigation nav with no JS!.
+  [video] Available at: <https://www.youtube.com/watch?v=8QKOaTYvYUA> [Accessed 28 June 2021]. ---*/
+/*----------- Hides Hamburger icon ----------*/
   .nav-toggle-label{
     display: none;
   }
@@ -375,26 +417,34 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
     transition: transform ease-in-out 250ms;
   }
   nav li{
-    margin-right: 3em ;
+    margin-right: 18px ;
     margin-bottom: 0;
   }
   nav li a{
    text-decoration: none; 
     color: white; 
-    font-size: 12;
+    font-size: 12px;
     display: inline-block;
    padding: 10px;}
   }
-
-   .column {
-        width: 37%;
-        margin: 1%;
-  }
+/*----------- Responsive Portfolio.CSS----------*/
+.column {
+   width: 37%;
+   margin: 1%;
 }
+/*----------- Responsive CV.CSS----------*/
+.cv_main h1{    margin-top: -30px;
+    margin-bottom: -12px; max-width: 100%;}
 
 
+/* Media Quarry for Screen 600 PX*/
 @media screen and ( max-width:600px){
-main{ max-width: 100%; }
+
+  /* Responsive main */
+main{ max-width: 100%;
+      padding-top: 9%;}
+
+/* Responsive index.HTML */
 .container{
   width: 100%; order: 2;
   flex-direction: column;
@@ -420,24 +470,31 @@ h1{  font-family: cursive; }
     margin-right: 80px; background-color: #b7d5de;
     padding: 20px; max-width: 100%; }  
 
+/*----------- Responsive Portfolio.CSS----------*/
 .column {
     max-width: 50%;
     padding-left: 10%;
   }
 .row{ padding-left: 20%; }
 }
+/* Responsive footer */
 footer{
   max-width: 100%;
 }
+/* Responsive Site Report */
 .report{ max-height: 100%; padding-top: 7%;}
-}
+
+/* Responsive CV */
 .cv_main{ text-align: left;margin: 10px; max-width: 100%;
   font-size: 18px;
 margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
-.cv_main h1{    margin-top: 16px;
+.cv_main h1{    margin-top: -21px;
     margin-bottom: -12px; max-width: 100%;}
 
+
+/* Media Quarry for Screen Size 500 PX*/
 @media screen and ( max-width:500px){
+  /* Responsive index.HTML */
 .container{
   width: 100%; order: 2;
   flex-direction: column;}
@@ -453,23 +510,23 @@ h1{  font-family: cursive; padding-top: 7%; }
   width: 50%;
   height: 500px;
 }
-.left img{ width: 100%;
+.left img{ width: 100%; max-height: 100%;
 }
 .left img:hover{
   transform: scale(1.2,1.2);
 }
-.Images img{ max-width: 100%; }
-.Images p{ text-align: center; margin-left: 80px;
-    margin-right: 80px; background-color: #b7d5de;
-    padding: 20px; max-width: 100%; } 
+
+/*----------- Responsive SiteReport.CSS----------*/ 
 
 .report{ max-height: 100%; padding-top: 7%;}
+
+/*----------- Responsive Portfolio.CSS----------*/
 .column {
   float: left;
   max-width: 100%;
   background-color: #9acaf4;
   text-align: center;
-  max-font-size: 18px;
+  font-size: 18px;
   font-family: cursive;
 }
 .portfolio main{ padding-top: 9%;  }
@@ -477,6 +534,7 @@ h1{  font-family: cursive; padding-top: 7%; }
   max-height: 100%;
   max-width: 100%;
 }
+}
 
-}
-}
+
+/*----------- END----Of----CSS ----------*/
