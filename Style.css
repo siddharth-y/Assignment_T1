@@ -1,10 +1,10 @@
 /* ----------------CSS of Body for all webpage ------------------ */
 
-body{ margin: 0; background: white; }
+body{ margin: 0; background: white;  }
 
 /* ------------------------CSS of main for all webpage------------------------ */
 
-main{ padding-top: 7%;
+main{ padding-top: 0;
     padding-left: 3%;
     max-width: 100%; }
 
@@ -12,9 +12,7 @@ main{ padding-top: 7%;
 
 header {
   background: black;
-  text-align: center;
-  position: fixed;
-  z-index: 999;
+  text-align: left;
   width: 100%;
   top: 0;
 }
@@ -22,133 +20,105 @@ header {
 margin-left: 0px;}
 
 /* ------------------------------------------------------------------ */
-
 /* Navigation Style*/
 nav {
-  position: absolute;
-  text-align: right;
-  top: 100%;
-  right: 0;
-  background:linear-gradient(black, #676565);
-  width: 100%;
-  justify-content: space-between;
-  transform: scale(1,0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
+  display: flex;
+  float: right;
+  justify-content: right;
+ 
 }
 
 nav ul {
-  margin: 0;
-  padding: 15px;
-  list-style: none;
-}
+    margin: 13px;
+  }
 
 /* Navigation links*/
 nav li {
-  margin-bottom: 1em;
-  margin-left: 1em;
+  display: inline-block;
+      padding: 12px;
+    
 }
 
 nav a {
+  padding: 10px;
+  display: block;
   color: white;
   text-decoration: none;
   font-size: 1rem;
   text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
   
 }
 
 /* Navigation links hover*/
 nav a:hover {
  background-color: #e66a6a;
-} 
-
-/* ------------------------------------------------------------------ */
-
-/* Hamburger icon.*/
-/*Powell, K., 2018.
- Create a responsive navigation nav with no JS!.
-  [video] Available at: <https://www.youtube.com/watch?v=8QKOaTYvYUA> [Accessed 28 June 2021].*/
-/*----------- Toggles Hamburger icon ----------*/
-.nav-toggle{
-  position: absolute ;
-  top: -9999px ;
-  left: -9999px ;
 }
-.nav-toggle:checked ~ nav{
- transform: scale(1,1) ;
-}
-
-.nav-toggle-label{
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 1em;
-  height: 100%;
+.nav-toggle{color: white;
+  float: right;
+  border-bottom: 2px solid white;
+  padding: 10px;
   display: flex;
-  align-items: center;
-}
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
-}
-.nav-toggle-label span::before{
-  bottom: 7px;
-}
-.nav-toggle-label span::after {
-  top: 7px;
+  justify-content: flex-end;
 } 
-
-.nav-toggle:checked ~ nav a{
- opacity: 1;
- transition: opacity 250ms ease-in-out 250ms;
+#nav-toggle{
+  display: none;
 }
+.nav-toggle-label label {
+  justify-content: flex-end;
+  transition: initial;
+}
+.nav-toggle-label {
+  background-color:black;
+  height: 45px;
+  width: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  float: right;
+  padding-top: 3%;
+  padding-right: 27px;
+  display: none;
+}
+.nav-toggle-label span{
+  background-color: white;
+  height: 3px;
+  width: 80%;
+  flex-direction: column;
+  margin: 5px 0px;
+}
+.nav-toggle-label{
+  display: none;
+}
+
 
 /* ------------------------------------------------------------------ */
 
 /* Index.HTML CSS */
-.index-main{ padding-top: 10%; padding-bottom: 10%; }
+.rmain{ padding-bottom:  10%; padding-left: 0; width: 100%; height: 100%; overflow: hidden;}
 .container{width: 100%; 
-  padding-left: 8%;
-  padding-right: 8%;
-  overflow: hidden;
-  box-sizing: border-box; 
-  display: flex;
-  padding-bottom: 10%; }
-
-.Right{ 
-       width: 50%;
-        height: 200px;
-        float: right;
-        text-align: center;
-        padding: 65px;}
-h1{  font-family: cursive; }
+  padding: 0;
+  }  
+.left{ padding-left: 10%; text-align: center; }  
+.left h1{ text-align: center; float: left; }
+.left h2{ text-align: center; float: left; }
+.left h3{ text-align: center; float: left; }
+/* Index.HTML  Button CSS */
 .button {
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
+  padding-bottom: 0%;
 }
  .button1 {
   background-color: #e66a6a; 
   color: black; 
+  transition: all 0.5s;
   border: 14px solid #e66a6a;
   border-radius: 15px;
 }
@@ -161,30 +131,74 @@ h1{  font-family: cursive; }
 
 .button2 {
   background-color: #008CBA; 
-  color: black; 
+  color: black;
+  transition: all 0.5s; 
   border: 14px solid #008CBA;
   border-radius: 15px;
 }
+/* Index.HTML Button Animation CSS */
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;}
 .button2:hover {
   background-color: #008CBA;
   color: white;
 }
-
-.left{ float: left;
-	max-width: 100%;
-
+.Container{
+display: flex;
+flex-direction: row;
 }
-.left img{ max-height: 250px;
-     padding: 0px;
-     padding-top: 1%;
-     padding-left: 3%;
-     padding-bottom: 30%;
-     
-      }
-.left img:hover{
-	transform: scale(1.5,1.5);
+.left{float: left;
 }
+.right { float: right; padding-right: 10%;}
+.right img{ max-width: 100%; width: 50%; }
+.right img:hover{
+  transform: scale(1.5,1.5);}
+
 /* ------------------------------------------------------------------ */
 
 /* Max size for images*/
@@ -217,6 +231,7 @@ footer{ background-color: silver;
 }
 .row,
 .row > .column {
+ margin: 3%;
  padding-top:7px ;
  padding-left: 7px;
  padding-right: 7px;
@@ -251,16 +266,20 @@ footer{ background-color: silver;
 /* ------------------------------------------------------------------ */
 
 /*---------- C V ---------*/
-.cv_main{ text-align: left;margin: 10px; max-width: 100%;
-margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
-.cv_main h1{    margin-top: -21px;
+.cv_main{ text-align: left;
+  margin: 10px;
+ padding-left: 60px; 
+ padding-bottom: 50px;
+ border-style: double ;
+} 
+.cv_main h1{    margin-top: 23px;
     margin-bottom: -12px; max-width: 100%;}
 
-
+/* ------------------------------------------------------------------ */
 
 /*----------- Contact.CSS----------*/
 .Form{ margin: 6%;
-    padding-top: 4%; max-width: 100%; padding-bottom: 1%; box-sizing: border-box; }
+    padding-top: 0;  padding-bottom: 1%; box-sizing: border-box; }
 .Form fieldset{ padding: 33px; margin: 30px; background: whitesmoke; width: 50%; margin-left: 2px; }
 .Form legend{ text-align: center; }
 .Form div{ padding-left: 120px; }
@@ -285,7 +304,7 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
 
 /*----------- Site Report.CSS----------*/
 
-.report h2{ padding-top: 7%; }
+.report h2{ padding-top: 1%; }
 
 .report p{
   font-size: 18px;
@@ -371,173 +390,120 @@ margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: doubl
 
 
 
-/* Media Quarry for Screen Size 999*/
-@media screen and (min-width: 999px){
-  main{ max-width: 100%;
-      padding-top: 9%;}
-/* Responsive hamburger menu */
-/*-- Powell, K., 2018.
- Create a responsive navigation nav with no JS!.
-  [video] Available at: <https://www.youtube.com/watch?v=8QKOaTYvYUA> [Accessed 28 June 2021]. ---*/
-/*----------- Hides Hamburger icon ----------*/
-  .nav-toggle-label{
+/* Media Quarry for Screen Size 1000px*/
+@media screen and (max-width: 1000px)
+{
+
+  header {
+  background: black;
+  text-align: left;
+  width: 100%;
+  
+ 
+}
+.logo{ max-width: 100%; cursor: pointer; margin: 15px;
+margin-left: 0px;}
+
+  nav{ background-color: black;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
     display: none;
+
+}
+
+nav ul {
+  background: linear-gradient(black, #929292);
+  padding: 0;
+  flex-direction: column;
+  width: 100%;
+    margin: 0;
+    background-color: black;
+    display: inline-flex;
   }
-  header{
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr);
-    position: fixed;
-  } 
-  .logo{
-    grid-column: 1;
+
+/* Navigation links*/
+nav li {
+  padding: 12px;
+    
+}
+
+nav a {text-align: right;
+  padding: 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* Navigation links hover*/
+nav a:hover {
+ background-color: #e66a6a;
+} 
+.nav-toggle-label label {
+  justify-content: flex-end;
+  display: flex;
+}
+.nav-toggle{color: white;
+  float: right;
+  color: white;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+
+} 
+#nav-toggle:checked + nav{
+  display: flex; 
+}
+.nav-toggle-label {
+  background-color:black;
+  height: 45px;
+  width: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  float: right;
+  padding-top: 3%;
+  padding-right: 15px;
+   
+}
+  .container{width: 100%; 
+    height: 100%;
+    overflow: hidden;
+
+  padding-bottom: 35%; 
+  }
+  footer{
     max-width: 100%;
   }
 
-  nav{
-    all: unset;
-    grid-column: 3 /4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  nav ul{
-    display: flex;
-  }
-  nav a{
-    opacity: 1;
-    position: relative;
-  }
-  nav a::before{
-    content: '';
-    display: block;
-    background:#e66a6a ;
-    position: absolute;
-     top: -.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
-  nav li{
-    margin-right: 18px ;
-    margin-bottom: 0;
-  }
-  nav li a{
-   text-decoration: none; 
-    color: white; 
-    font-size: 12px;
-    display: inline-block;
-   padding: 10px;}
-  }
-/*----------- Responsive Portfolio.CSS----------*/
-.column {
-   width: 37%;
-   margin: 1%;
 }
-/*----------- Responsive CV.CSS----------*/
-.cv_main h1{    margin-top: -30px;
-    margin-bottom: -12px; max-width: 100%;}
-
-
-/* Media Quarry for Screen 600 PX*/
-@media screen and ( max-width:600px){
-
-  /* Responsive main */
-main{ max-width: 100%;
-      padding-top: 9%;}
-
-/* Responsive index.HTML */
-.container{
-  width: 100%; order: 2;
-  flex-direction: column;
-
+/* Media quary for Index.html  */
+@media screen and (max-width: 900px)
+{
+.rmain{ padding-bottom:  10%; 
+  padding-left: 0; width: 100%;
+   height: 100%; 
+   overflow: hidden;
 }
-.Right{ 
-       max-width: 100%;
-     }
-h1{  font-family: cursive; }
-
-
-.left{ float: left;
-  width: 50%;
-  height: 500px;
+.container{width: 100%; 
+  padding: 0;
+  }  
+.right { float: right;
+ padding-right: 10%;
 }
-.left img{ max-width: 100%; padding-top: 57%;
-}
-.left img:hover{
-  transform: scale(1.5,1.5);
-}
-.Images img{ max-width: 100%; }
-.Images p{ text-align: center; margin-left: 80px;
-    margin-right: 80px; background-color: #b7d5de;
-    padding: 20px; max-width: 100%; }  
-
-/*----------- Responsive Portfolio.CSS----------*/
-.column {
-    max-width: 50%;
-    padding-left: 10%;
-  }
-.row{ padding-left: 20%; }
-}
-/* Responsive footer */
-footer{
-  max-width: 100%;
-}
-/* Responsive Site Report */
-.report{ max-height: 100%; padding-top: 7%;}
-
-/* Responsive CV */
-.cv_main{ text-align: left;margin: 10px; max-width: 100%;
-  font-size: 18px;
-margin-top: 100px; padding-left: 60px; padding-bottom: 50px; border-style: double ;} 
-.cv_main h1{    margin-top: -21px;
-    margin-bottom: -12px; max-width: 100%;}
-
-
-/* Media Quarry for Screen Size 500 PX*/
-@media screen and ( max-width:500px){
-  /* Responsive index.HTML */
-.container{
-  width: 100%; order: 2;
-  flex-direction: column;}
-.logo{ max-width: 50%;  }
-
-
-.Right{ 
-       max-width: 100%;
-     }
-h1{  font-family: cursive; padding-top: 7%; }
-
-
-.left{ float: left;
-  width: 50%;
-  height: 500px;
-}
-.left img{ width: 100%; max-height: 100%; padding-top: 150%; padding-left: 60%;
-}
-.left img:hover{
-  transform: scale(1.2,1.2);
+.right img{ max-width: 100%;
+ width: 50%;
+  padding-top: 10%;
+   }
+.right img:hover{
+  transform: scale(1.2,1.2);}
 }
 
-/*----------- Responsive SiteReport.CSS----------*/ 
-
-.report{ max-height: 100%; padding-top: 7%;}
-
-/*----------- Responsive Portfolio.CSS----------*/
-.column {
-  float: left;
-  max-width: 100%;
-  background-color: #9acaf4;
-  text-align: center;
-  font-size: 18px;
-  font-family: cursive;
-}
-.portfolio main{ padding-top: 9%;  }
-.content img{
-  max-height: 100%;
-  max-width: 100%;
-}
-}
 
 
 /*----------- END----Of----CSS ----------*/
